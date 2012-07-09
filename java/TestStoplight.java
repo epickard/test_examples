@@ -39,7 +39,7 @@ public class TestStoplight extends ConsoleProgram {
 		if (actualColor.equals(expectedColor)) {
 			println("PASS: Actual color " + actualColor + "matches expected color " + expectedColor + " as expected.");
 		} else {
-			println("FAIL: Actual color, " + actualColor + ", does not match expected color, which is " + ".");
+			println("FAIL: Actual color, " + actualColor + ", does not match expected color, which is " + expectedColor + ".");
 		}
 	}
 	
