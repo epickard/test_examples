@@ -1,5 +1,10 @@
 import java.awt.*;
 /**
+ * ****************************************************************************************
+ * THE ENTIRE CONTENTS OF THIS CLASS COPIED FROM ERIC ROBERTS' ART & SCIENCE OF JAVA:
+ * http://people.reed.edu/~jerry/121/materials/artsciencejava.pdf, PAGE 147
+ * ****************************************************************************************
+ * 
  * This class represents a simple implementation of a stoplight.
  * The client can determine the current state of the stoplight by
  * calling stoplight.getState() and change it to the next color
