@@ -10,41 +10,37 @@ public class TestStoplight extends ConsoleProgram {
 	
 	public void run() {
 		
-		/**TEST 1: verify initial state is GREEN */
-		myState = myLight.getState();
+		/**Test 1: Initial State, GREEN*/
+		verifyState(Color.GREEN, myLight.getState());
+		 myLight.advance();
+		 
+		/**Test 2: Yellow*/
+		 verifyState(Color.YELLOW, myLight.getState());
+		 myLight.advance();
+		 
+		/**Test 3: Red*/
+		 verifyState(Color.RED, myLight.getState());
+		 myLight.advance();
+		 
+		/**Test 4: Return to Green*/
+		 verifyState(Color.GREEN, myLight.getState());
+		 myLight.advance();
 
-		if (myState.equals(Color.GREEN)) {
-			println("PASS: Initial State is GREEN as expected");
+/*
+ * Confirms whether the actual color of the Stoplight instance matches the expected color. 
+ * Prints the result to the console.
+ * 
+ * @param expectedColor  Initially green, then yellow, then red, then back to green
+ * @param actualColor    The current color state of myLight.
+ */
+	}
+	
+	private void verifyState(Color expectedColor, Color actualColor) {		
+		if (actualColor.equals(expectedColor)) {
+			println("PASS: Actual color " + actualColor + "matches expected color " + expectedColor + " as expected.");
 		} else {
-			println("FAIL: Initial State is not GREEN.");
+			println("FAIL: Actual color, " + actualColor + ", does not match expected color, which is " + ".");
 		}
-		
-		/**TEST 2: advance the light. verify next state is YELLOW */
-		 myLight.advance();
-		 myState = myLight.getState();
-			if (myState.equals(Color.YELLOW)) {
-				println("PASS: Initial State is YELLOW as expected");
-			} else {
-				println("FAIL: Initial State is not YELLOW.");
-			}
-			
-		/**TEST 3: advance the light. verify next state is RED */
-		 myLight.advance();
-		 myState = myLight.getState();
-			if (myState.equals(Color.RED)) {
-				println("PASS: Initial State is RED as expected");
-			} else {
-				println("FAIL: Initial State is not RED.");
-			}
-			
-		/**TEST 4: advance the light. verify next state is GREEN */
-		 myLight.advance();
-		 myState = myLight.getState();
-			if (myState.equals(Color.GREEN)) {
-				println("PASS: Initial State is GREEN as expected");
-			} else {
-				println("FAIL: Initial State is not GREEN.");
-			}
 	}
 	
 /** Instance variables */
